@@ -1,0 +1,93 @@
+#game-panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "fei mo mo chao"
+                         "fei mo mo chao"
+                         "yun yu yu zhong"
+                         "yun k1 k2 zhong"
+                         "k3 . . k4";
+    width:40em;
+    height:50em;
+    border: 2px solid gainsboro;
+    z-index: 1;
+}
+
+.modules:not(.goRow){
+    display:inline;
+    overflow: hidden;
+}
+
+.goCol{
+    height:20em;
+    width:10em;
+}
+
+.goRow{
+    width:20em;
+    height:10em;
+}
+
+
+
+.dog{
+    height:20em;
+    width:20em;
+}
+
+.small-cats{
+    max-width: 10em;
+    max-height:10em;
+}
+
+.catimg{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#catFei{
+    grid-area: fei;
+}
+
+#catChao{
+    grid-area: chao;
+}
+
+#catYun{
+    grid-area: yun;
+}
+
+#catZhong{
+    grid-area: zhong;
+}
+
+#catYu{
+    grid-area: yu;
+}
+
+#kitty1{
+    grid-area: k1;
+}
+
+#kitty2{
+    grid-area: k2;
+}
+
+#kitty3{
+    grid-area: k3;
+}
+
+#kitty4{
+    grid-area: k4;
+}
+
+#momo{
+    grid-area: mo;
+}
+
+.goRow img{
+    transform: rotate(-90deg) translateX(-10em);
+    transform-origin: top left;
+    max-width: 200%;
+    max-height: 200%;
+}
