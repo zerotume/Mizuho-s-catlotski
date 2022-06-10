@@ -12,3 +12,12 @@
 
 
 */
+import cover from './cover.js';
+import game from './game.js'
+
+
+
+window.onload = () => {
+    cover();
+    game();
+}

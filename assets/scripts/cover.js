@@ -1,4 +1,6 @@
-window.onload = () => {
+import { panelArray } from "./game.js";
+
+export default function cover() {
 
     let gamepan = document.getElementById('game-panel');
     const cover = document.createElement("div");
@@ -19,11 +21,17 @@ window.onload = () => {
         for(let j = 1; j <= 4; j++){
             let square = document.createElement("div");
             square.id = `square-${i}-${j}`;
-            square.class = "cover-squares";
+            square.classList.add("cover-squares");
             square.style.gridRow = `${i}/${i+1}`;
             square.style.gridColumn = `${j}/${j+1}`;
             square.style.backgroundColor = "transparent";
-            square.style.pointerEvents = "none";
+            if(!panelArray[i-1][j-1]){
+                square.style.pointerEvents = "none";
+                square.classList.add("occupied");
+            }else{
+                square.style.pointerEvents = "auto";
+                square.classList.add("avaliable");
+            }
             if(i === 5 && j === 2)square.style.borderBottom = "2px solid rgba(47, 114, 92, 0.5)";
             if(i === 5 && j === 3)square.style.borderBottom = "2px solid rgba(47, 114, 92, 0.5)";
             cover.append(square);

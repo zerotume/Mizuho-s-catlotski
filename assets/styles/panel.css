@@ -13,7 +13,9 @@
     z-index: 1;
 }
 
-.modules:not(.goRow){
+
+.modules{
+    box-sizing: border-box;
     display:inline;
     overflow: hidden;
 }
